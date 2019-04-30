@@ -15,4 +15,4 @@ echo "typedef unsigned short half;"      >> $oclfun_decl_file
 echo "typedef unsigned char* image2d_t;" >> $oclfun_decl_file
 
 grep -Pzo "(?s)\N*__kernel.*?{" $cl_file | sed -e 's/{/;/g' >> $oclfun_decl_file
-./parsecl $oclfun_decl_file > $wrapper_file
+./clkernel-parser $oclfun_decl_file > $wrapper_file
