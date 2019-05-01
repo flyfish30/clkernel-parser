@@ -3,6 +3,7 @@
 if [ ! $# -eq 2 ]
 then
     echo "get_oclfun_decl: <oclkernels.cl> <oclcallwrapper.c>"
+    exit 1
 fi
 
 cl_file=$1
